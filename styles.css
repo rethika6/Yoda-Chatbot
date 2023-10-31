@@ -1,0 +1,49 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    background-image: url('yodaBackground.png');
+    background-size: cover; /* Adjust the size to cover the entire viewport */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, to fix the background when scrolling */
+    color: #000000; /* Set text color to be visible against the background */
+}
+
+.chat-container {
+    position: absolute;
+    bottom: 125px;
+    left: 155px;
+    right: 100px;
+    display: flex;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    height: 110px;
+    width: 820px;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+#userInput {
+    width: 820px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#chatOutput {
+    position: absolute;
+    top: 242px;
+    bottom: 425px;
+    left: 245px;
+    right: 60px;
+    display: flex;
+    /*border: 1px solid #ffffff;*/
+    border-radius: 5px;
+    height: 130px;
+    overflow-y: auto;
+    max-width: 900px;
+}
