@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const OpenAI = require('openai');
-const openai = new OpenAI({ apiKey:''}); //replace 'API Key' with your API key
+const openai = new OpenAI({ apiKey:'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'});
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -13,7 +13,9 @@ app.post('/api/chat', async (req, res) => {
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
+            //changes the role to system and content to make the chatbot act like Yoda.
             { role: "system", content: "You are Yoda." },
+            //takes in user input
             { role: "user", content: userInput }
         ],
     });
